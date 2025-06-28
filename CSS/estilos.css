@@ -23,6 +23,11 @@ header {
   background: rgba(0, 0, 0, 0.6);
   backdrop-filter: blur(10px);
   box-shadow: 0 0 15px #0f0;
+  background-image: url("../Imagenes/exuberante-selva-amazonica-ingredientes-2.webp");
+  background-repeat: no-repeat;  
+  background-size: 100% auto;     
+  background-position: center;  
+  color: #0a0a0a;
 
   h1 {
     font-size: 5rem;
@@ -44,6 +49,10 @@ nav {
   backdrop-filter: blur(10px);
   padding: 0.8rem 0;
   box-shadow: 0 2px 8px rgba(0, 255, 0, 0.15);
+  background-image: url("../Imagenes/raizes.jpg");
+  background-repeat: no-repeat;  
+  background-size: 100% auto;     
+  background-position: center;  
 
   .nav-container {
     display: flex;
