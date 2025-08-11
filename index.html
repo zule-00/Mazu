@@ -1,144 +1,198 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>MaZu Restaurant</title>
-  <link rel="stylesheet" href="CSS/estilos.css" />
-</head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sabores de la Amazonía Peruana</title>
+    <link rel="stylesheet" href="CSS/estilos.css">
+   </head>
 <body>
+    <!-- Checkbox para controlar el menú (debe estar antes del header) -->
+    <input type="checkbox" id="menu-toggle" class="menu-toggle">
+    
+    <!-- Header Principal -->
+    <header class="header">
+        <div class="header__container">
+            <h1 class="header__title">Sabores de la Amazonía Peruana</h1>
+            <p class="header__subtitle">Descubre los tesoros culinarios de nuestra selva</p>
+            
+            <!-- Menú Hamburguesa -->
+            <label for="menu-toggle" class="hamburger">
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+                <span class="hamburger__line"></span>
+            </label>
+        </div>
+    </header>
 
-  <header>
-    <h1>MaZu Restaurant</h1>
-    <p>Fusión amazónica en un mundo moderno</p>
-  </header>
+    <!-- Overlay para cerrar el menú -->
+    <label for="menu-toggle" class="overlay"></label>
 
-<nav>
-  <div class="nav-container">
-    <a href="#inicio">Inicio</a>
-    <a href="#menu">Menú</a>
-    <a href="#galeria">Galería</a>
-    <a href="#historia">Historia</a>
-    <a href="#reservas">Reservas</a>
-    <a href="#contacto">Contacto</a>
-  </div>
-</nav>
+    <!-- Menú Móvil -->
+    <nav class="mobile-menu">
+        <div class="mobile-menu__container">
+            <ul class="mobile-menu__list">
+                <li class="mobile-menu__item">
+                    <a href="#inicio" class="mobile-menu__link" onclick="document.getElementById('menu-toggle').checked = false">Inicio</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#platos" class="mobile-menu__link" onclick="document.getElementById('menu-toggle').checked = false">Platos Típicos</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#ingredientes" class="mobile-menu__link" onclick="document.getElementById('menu-toggle').checked = false">Ingredientes</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#historia" class="mobile-menu__link" onclick="document.getElementById('menu-toggle').checked = false">Historia</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#recetas" class="mobile-menu__link" onclick="document.getElementById('menu-toggle').checked = false">Recetas</a>
+                </li>
+                <li class="mobile-menu__item">
+                    <a href="#contacto" class="mobile-menu__link" onclick="document.getElementById('menu-toggle').checked = false">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
+    <!-- Menú de Navegación Fijo (Desktop) -->
+    <nav class="navbar">
+        <div class="navbar__container">
+            <ul class="navbar__list">
+                <li class="navbar__item">
+                    <a href="#inicio" class="navbar__link navbar__link--active">Inicio</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#platos" class="navbar__link">Platos Típicos</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#ingredientes" class="navbar__link">Ingredientes</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#historia" class="navbar__link">Historia</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#recetas" class="navbar__link">Recetas</a>
+                </li>
+                <li class="navbar__item">
+                    <a href="#contacto" class="navbar__link">Contacto</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    <section class="hero-carousel">
-    <input type="radio" name="slider" id="slide1" checked>
-    <input type="radio" name="slider" id="slide2">
-    <input type="radio" name="slider" id="slide3">
-    <input type="radio" name="slider" id="slide4">
-    <input type="radio" name="slider" id="slide5">
+    <!-- Contenido Principal -->
+    <main class="main">
+        <!-- Sección Inicio -->
+        <section id="inicio" class="section section--hero">
+            <div class="section__container">
+                <h2 class="section__title">Bienvenidos a la Gastronomía Amazónica</h2>
+                <p class="section__text">
+                    La Amazonía peruana alberga una riqueza culinaria incomparable, donde los sabores ancestrales 
+                    se combinan con ingredientes únicos de la selva para crear experiencias gastronómicas únicas.
+                </p>
+            </div>
+        </section>
 
-    <div class="slides">
-        <div class="slide s1"></div>
-        <div class="slide s2"></div>
-        <div class="slide s3"></div>
-        <div class="slide s4"></div>
-        <div class="slide s5"></div>
-    </div>
+        <!-- Sección Platos Típicos -->
+        <section id="platos" class="section">
+            <div class="section__container">
+                <h2 class="section__title">Platos Típicos</h2>
+                <div class="dishes">
+                    <div class="dish-card">
+                        <h3 class="dish-card__title">Juane</h3>
+                        <p class="dish-card__description">
+                            Plato festivo preparado con arroz, pollo, huevos y especias, envuelto en hojas de bijao.
+                        </p>
+                    </div>
+                    <div class="dish-card">
+                        <h3 class="dish-card__title">Tacacho con Cecina</h3>
+                        <p class="dish-card__description">
+                            Plátano verde machacado acompañado de cecina de cerdo y chorizo regional.
+                        </p>
+                    </div>
+                    <div class="dish-card">
+                        <h3 class="dish-card__title">Paiche a la Plancha</h3>
+                        <p class="dish-card__description">
+                            Pescado gigante de la Amazonía preparado a la plancha con especias locales.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
-    <div class="dots">
-        <label for="slide1" class="dot"></label>  
-        <label for="slide2" class="dot"></label>
-        <label for="slide3" class="dot"></label>
-        <label for="slide4" class="dot"></label>
-        <label for="slide5" class="dot"></label>
-    </div>
-    </section>
-        
+        <!-- Sección Ingredientes -->
+        <section id="ingredientes" class="section section--alt">
+            <div class="section__container">
+                <h2 class="section__title">Ingredientes de la Selva</h2>
+                <div class="ingredients">
+                    <div class="ingredient">
+                        <h3 class="ingredient__name">Plátano Verde</h3>
+                        <p class="ingredient__description">Base fundamental de muchos platos amazónicos.</p>
+                    </div>
+                    <div class="ingredient">
+                        <h3 class="ingredient__name">Yuca</h3>
+                        <p class="ingredient__description">Tubérculo esencial en la dieta amazónica.</p>
+                    </div>
+                    <div class="ingredient">
+                        <h3 class="ingredient__name">Culantro</h3>
+                        <p class="ingredient__description">Hierba aromática que caracteriza los sabores selváticos.</p>
+                    </div>
+                    <div class="ingredient">
+                        <h3 class="ingredient__name">Ají Charapita</h3>
+                        <p class="ingredient__description">El ají más pequeño y picante del mundo.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Sección Historia -->
+        <section id="historia" class="section">
+            <div class="section__container">
+                <h2 class="section__title">Historia Culinaria</h2>
+                <p class="section__text">
+                    La gastronomía amazónica peruana es el resultado de miles de años de tradición indígena, 
+                    enriquecida por la biodiversidad única de la región. Los pueblos originarios desarrollaron 
+                    técnicas de cocción y conservación que se mantienen hasta hoy.
+                </p>
+                <p class="section__text">
+                    La influencia de las migraciones y el intercambio cultural ha creado una fusión única que 
+                    caracteriza la cocina amazónica contemporánea, manteniendo siempre el respeto por los 
+                    ingredientes locales y las técnicas ancestrales.
+                </p>
+            </div>
+        </section>
 
-  <main>
-    <section id="menu" class="card">
-      <h2>Menú Destacado</h2>
-      <p>Descubre nuestros platos tradicionales con un toque innovador.
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-      </p>
-    </section>
+        <!-- Sección Recetas -->
+        <section id="recetas" class="section section--alt">
+            <div class="section__container">
+                <h2 class="section__title">Recetas Tradicionales</h2>
+                <p class="section__text">
+                    Próximamente compartiremos recetas auténticas de la cocina amazónica, 
+                    transmitidas de generación en generación por las familias de la región.
+                </p>
+            </div>
+        </section>
 
-    <section id="galeria" class="card gallery">
-      <h2>Galería</h2>
-      <div class="img-grid">
-        <img src="Imagenes/img sin cargar.jpg" alt="Plato 1">
-        <img src="Imagenes/img sin cargar.jpg" alt="Plato 2">
-        <img src="Imagenes/img sin cargar.jpg" alt="Plato 3">
-        <img src="Imagenes/img sin cargar.jpg" alt="Plato 4">
-        <img src="Imagenes/img sin cargar.jpg" alt="Plato 5">
-        <img src="Imagenes/img sin cargar.jpg" alt="Plato 6">
-        <img src="Imagenes/img sin cargar.jpg" alt="Ambiente">
-      </div>
-    </section>
+        <!-- Sección Contacto -->
+        <section id="contacto" class="section">
+            <div class="section__container">
+                <h2 class="section__title">Contacto</h2>
+                <p class="section__text">
+                    ¿Quieres saber más sobre la gastronomía amazónica? Contáctanos para más información.
+                </p>
+                <p class="section__text" style="text-align: center;">
+                    <strong>Email:</strong> info@saboresamazonia.pe<br>
+                    <strong>Teléfono:</strong> +51 999 888 777
+                </p>
+            </div>
+        </section>
+    </main>
 
-    <section id="historia" class="card">
-      <h2>Nuestra Historia</h2>
-      <p>Inspirados en la riqueza de la selva, fusionamos tradición y modernidad.
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-      </p>
-    </section>
-
-    <section id="reservas" class="card">
-      <h2>Reservas</h2>
-      <p>Pronto podrás reservar online tu experiencia gastronómica amazónica.
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-
-      </p>
-    </section>
-
-    <section id="contacto" class="card">
-      <h2>Contacto</h2>
-      <p>📍 Dirección | ☎️ Teléfono | 📧 Email
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-        <br>
-      </p>
-    </section>
-  </main>
-
-  <footer>
-    <p>&copy; 2025 MaZu Restaurant - Todos los derechos reservados</p>
-  </footer>
-
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer__container">
+            <p class="footer__text">&copy; 2025 Sabores de la Amazonía Peruana. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 </body>
 </html>
